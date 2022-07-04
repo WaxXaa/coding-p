@@ -1,0 +1,135 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
+    font-family: 'Work Sans', sans-serif;
+    color: #ffff;
+    background-color: #2B2B58;
+  }
+  .card{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 200px 20px 20px 20px;
+  }
+  .log{
+    height: 230px;
+    width: 290px;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #0A1F33;
+    opacity: 1;
+    background-image:  radial-gradient(#04040c 1.1px, transparent 1.1px), radial-gradient(#04040c 1.1px, #0A1F33 1.1px);
+    background-size: 44px 44px;
+    background-position: 0 0,22px 22px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 2px #25292D;
+  
+  }
+  .sing{
+    height: 320px;
+    width: 290px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #0A1F33;
+    opacity: 1;
+    background-image:  radial-gradient(#04040c 1.1px, transparent 1.1px), radial-gradient(#04040c 1.1px, #0A1F33 1.1px);
+    background-size: 44px 44px;
+    background-position: 0 0,22px 22px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 2px #25292D;
+  }
+  .name{
+    display:flex;
+    flex-direction: column;
+  }
+  .sing h3{
+    font-size: 22px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .log h3{
+    font-size: 22px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .email{
+    position: relative;
+    left: 26px;
+    height: 30px;
+    margin:5px 3px;
+    padding:5px 3px;
+    width: 220px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  .email svg{
+    color: black;
+    margin: 0px;
+    padding: 0px 4px;
+    
+  }
+  .email input{
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+  }
+  .password{
+    position: relative;
+    left: 26px;
+    height: 30px;
+    margin: 10px 3px;
+    padding: 5px 3px;
+    width: 220px;
+    background-color: #fff;
+    border-radius: 5px;
+  }
+  .password svg{
+    color: black;
+    margin: 0px;
+    padding: 0px 4px;
+  }
+  .password input{
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+  }
+  .submit{
+    position: relative;
+    left: 79px;
+    height: 30px;
+    margin-top: 20px;
+    width: 120px;
+    background-color: #DC7500;
+    border-radius: 5px;
+  }
+  .submit button{
+    color: white;
+    height: 30px;
+    width: 120px;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    font-size: 15px;
+  }
+  
+  .name input{
+    position: relative;
+    left: 26px;
+    height: 30px;
+    width: 220px;
+    margin: 5px 3px;
+    padding: 5px 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    resize: none;
+    outline: none;
+  }

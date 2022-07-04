@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&family=Nothing+You+Could+Do&display=swap');
+/*normal font has a 200 width & 300 width*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+root {
+  font-size: 18px;
+}
+::-webkit-scrollbar {
+  width: 13px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+.grid-container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: minmax(130px, 250px) 1fr 1fr;
+  row-gap: 10px; 
+  background-color: #F6EDD9;
+}
+.header {
+  width: 100%;
+  display: grid;
+  grid-template: 65px 1fr 1fr / 1fr
+}
+.ttl {
+  text-align: center;
+  font-size: 2.8rem;
+  font-family: 'Nothing You Could Do', cursive;
+  color: #132B00;
+  max-height: 65px;
+}
+.banner {
+  grid-area: 2 / 1 / 4 / 2;
+  background-color: #648F08;
+  color: #F6EDD9;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.main-info {
+  display: grid;
+  grid-template: 110px 100px 1fr / 1fr;
+  width: 100%;
+  row-gap: 10px;
+}
+
+.about {
+  grid-area: 1 / 1 / 2 / 2;
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 7px; 
+  color: #132B00;
+}
+.services {
+  display: grid;
+  grid-template: 1fr / 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  background-color: #648F08;
+  color: #F6EDD9;
+  align-items: center;
+}
+.icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.material-symbols-outlined {
+  transform: scale(1.6);
+}
+
+.text-icon{
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  text-align: center;
+  align-items: center;
+}
+.testmls {
+  font-family: 'Josefin Sans', sans-serif;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 7px; 
+  color: #132B00;
+  display: flex;
+  border: 1px solid black;
+  height: 110px;
+}
+
+#cindy {
+  position: absolute;
+  top: 31rem;
+  animation-name: cindy;
+  animation-duration: 20s;
+  animation-fill-mode: linear;
+  animation-iteration-count: infinite;
+}
+
+#laura {
+  position: absolute;
+  top: 31rem;
+  animation-name: laura;
+  animation-duration: 20s;
+  animation-fill-mode: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cindy{
+  0% {opacity: 1;}
+  45%{opacity: 1}
+  50%{opacity: 0}
+  95%{opacity: 0}
+  100%{opacity: 1}
+}
+@keyframes laura {
+  0%{opacity: 0}
+  45%{opacity: 0}
+  50%{opacity: 1}
+  95%{opacity: 1}
+  100%{opacity: 0}
+}
