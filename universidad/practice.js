@@ -14,9 +14,6 @@ while(i <5) {
 document.write(tot_salary);
 */
 
-
-
-
 //number
 /*
 let i = 1;
