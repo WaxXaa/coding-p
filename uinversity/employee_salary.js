@@ -1,6 +1,5 @@
 // calculate the slary of an employee depending of how many years have been worked for the company
-// i will do it whit objects later
-
+/*
 let name = prompt('enter the name of the employee');
 let ini_sal = parseFloat(prompt('enter the salary of the employee'));
 let years = parseInt(prompt('enter how many years the employee have worked for the company'));
@@ -31,3 +30,4 @@ let tot_ensurance = social_ensurace + edu_ensurance;
 net = fin_sal - (fin_sal * tot_ensurance);
 console.log(name + " salary is: " + net);
 
+*/
