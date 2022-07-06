@@ -25,7 +25,7 @@ root {
 .grid-container {
   width: 100%;
   display: grid;
-  grid-template-rows: minmax(130px, 250px) 1fr 1fr;
+  grid-template-rows: minmax(130px, 250px) 1fr 450px;
   row-gap: 10px; 
   background-color: #F6EDD9;
 }
@@ -81,12 +81,16 @@ root {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+.icon:hover {
+  color: #132B00;
 }
 .material-symbols-outlined {
   transform: scale(1.6);
 }
 
-.text-icon{
+.text-icon {
   display: flex;
   justify-content: center;
   padding-top: 10px;
@@ -98,10 +102,9 @@ root {
   text-align: center;
   font-size: 1.5rem;
   padding: 7px; 
-  color: #132B00;
   display: flex;
-  border: 1px solid black;
-  height: 110px;
+  flex-direction: column;
+  height: 90px;
 }
 
 #cindy {
@@ -111,6 +114,7 @@ root {
   animation-duration: 20s;
   animation-fill-mode: linear;
   animation-iteration-count: infinite;
+  color: #132B00;
 }
 
 #laura {
@@ -120,9 +124,10 @@ root {
   animation-duration: 20s;
   animation-fill-mode: linear;
   animation-iteration-count: infinite;
+  color: #132B00;
 }
 
-@keyframes cindy{
+@keyframes cindy {
   0% {opacity: 1;}
   45%{opacity: 1}
   50%{opacity: 0}
@@ -136,3 +141,52 @@ root {
   95%{opacity: 1}
   100%{opacity: 0}
 }
+.footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #648F08;
+}
+.calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.clock {
+  padding: 10px;
+}
+.clock svg {
+  color: #648F08;
+}
+.week {
+  padding: 10px 0;
+  width: 100%;
+  background-color: #648F08;
+  display: flex;
+  justify-content: center;
+}
+table {
+  width: 95%;
+  color: #F6EDD9;
+  font-family: 'Josefin Sans', sans-serif;
+}
+th {
+  padding: 0 0 10px 0;
+}
+span:hover {
+  color: #132B00;
+}
+td, th {
+  cursor:default;
+}
+.foot {
+  width: 100%;
+  height: 100%;
+  background-color: #132B00;
+}
+ .calendar p  {
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 2.8rem;
+  margin: 10px;
+ }
