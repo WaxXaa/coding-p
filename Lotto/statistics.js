@@ -11,7 +11,7 @@ const domenica = {
         [0,8],
         [3,7],
         [7,6],
-        [2,0], 
+        [2,0],
         [1,6],
         [5,7],
         [0,3],
@@ -68,7 +68,7 @@ const domenica = {
         [1,8],
         [1,3],
         [1,6],
-        [8,6]    
+        [8,6]
     ]
 }
 
@@ -146,99 +146,39 @@ const mercoledi = {
     ]
 }
 const ocacions = {
-    Dom: {
-        D0: [0,0],
-        D1: [0,0],
-        D2: [0,0],
-        D3: [0,0],
-        D4: [0,0],
-        D5: [0,0],
-        D6: [0,0],
-        D7: [0,0],
-        D8: [0,0],
-        D9: [0,0]
-    },
-    Mie: {
-        D0: [0,0],
-        D1: [0,0],
-        D2: [0,0],
-        D3: [0,0],
-        D4: [0,0],
-        D5: [0,0],
-        D6: [0,0],
-        D7: [0,0],
-        D8: [0,0],
-        D9: [0,0]
+    day:[
+        [0,0],
+        [0,0],
+        [0,0],
+        [0,0],
+        [0,0],
+        [0,0],
+        [0,0],
+        [0,0],
+        [0,0],
+        [0,0]
+    ]
+}
+function cont (days, times) {
+    for(var i = 1; i < days.length; i += 1) {
+        for(var j = 0; j < days[i].length ; j += 1) {
+            for(var k = 0; k < days[i][j].length; k += 1) {
+                (days[i][j][k] == 0) ? times.day[0][k] = times.day[0][k] + 1
+                : (days[i][j][k] == 1) ? times.day[1][k] = times.day[1][k] + 1
+                : (days[i][j][k] == 2) ? times.day[2][k] = times.day[2][k] + 1
+                : (days[i][j][k] == 3) ? times.day[3][k] = times.day[3][k] + 1
+                : (days[i][j][k] == 4) ? times.day[4][k] = times.day[4][k] + 1
+                : (days[i][j][k] == 5) ? times.day[5][k] = times.day[5][k] + 1
+                : (days[i][j][k] == 6) ? times.day[6][k] = times.day[6][k] + 1
+                : (days[i][j][k] == 7) ? times.day[7][k] = times.day[7][k] + 1
+                : (days[i][j][k] == 8) ? times.day[8][k] = times.day[8][k] + 1
+                : (days[i][j][k] == 9) ? times.day[9][k] = times.day[9][k] + 1
+                : console.log("hola");
+            }
+        }
+        console.log(times.day)
+        return days[i][j][k];
     }
 }
-for (let i = 0; i < domenica.goup1.length; i += 1) {
-    console.log(domenica.goup1[i][0],domenica.goup1[i][1]);
-    switch (domenica.goup1[i][0]) {
-        case 0:
-            ocacions.Dom.D0[0] = ocacions.Dom.D0[0] + 1;
-            break;
-        case 1:
-            ocacions.Dom.D1[0] = ocacions.Dom.D1[0] + 1;
-            break;
-        case 2:
-            ocacions.Dom.D2[0] = ocacions.Dom.D2[0] + 1;
-            break;
-        case 3:
-            ocacions.Dom.D3[0] = ocacions.Dom.D3[0] + 1;
-            break;
-        case 4:
-            ocacions.Dom.D4[0] = ocacions.Dom.D4[0] + 1;
-            break;
-        case 5:
-            ocacions.Dom.D5[0] = ocacions.Dom.D5[0] + 1;
-            break;
-        case 6:
-            ocacions.Dom.D6[0] = ocacions.Dom.D6[0] + 1;
-            break;
-        case 7:
-            ocacions.Dom.D7[0] = ocacions.Dom.D7[0] + 1;
-            break;
-        case 8:
-            ocacions.Dom.D8[0] = ocacions.Dom.D8[0] + 1;
-            break;
-        case 9:
-            ocacions.Dom.D9[0] = ocacions.Dom.D9[0] + 1;
-            break;    
-
-    }
-    switch (domenica.goup1[i][1]) {
-        case 0:
-            ocacions.Dom.D0[1] = ocacions.Dom.D0[1] + 1;
-            break;
-        case 1:
-            ocacions.Dom.D1[1] = ocacions.Dom.D1[1] + 1;
-            break;
-        case 2:
-            ocacions.Dom.D2[1] = ocacions.Dom.D2[1] + 1;
-            break;
-        case 3:
-            ocacions.Dom.D3[1] = ocacions.Dom.D3[1] + 1;
-            break;
-        case 4:
-            ocacions.Dom.D4[1] = ocacions.Dom.D4[1] + 1;
-            break;
-        case 5:
-            ocacions.Dom.D5[1] = ocacions.Dom.D5[1] + 1;
-            break;
-        case 6:
-            ocacions.Dom.D6[1] = ocacions.Dom.D6[1] + 1;
-            break;
-        case 7:
-            ocacions.Dom.D7[1] = ocacions.Dom.D7[1] + 1;
-            break;
-        case 8:
-            ocacions.Dom.D8[1] = ocacions.Dom.D8[1] + 1;
-            break;
-        case 9:
-            ocacions.Dom.D9[1] = ocacions.Dom.D9[1] + 1;
-            break;
-    }    
-
-}
-
-console.log(ocacions.Dom);
+let b = cont(domenica, ocacions);
+console.log(b);
