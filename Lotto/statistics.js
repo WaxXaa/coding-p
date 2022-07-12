@@ -1,10 +1,10 @@
-const domenica = {
-    testGroup: [
+const domenica = [
+    [
         [1,4],
         [6,5],
         [7,6]
     ],
-    goup1: [
+    [
         [1,5],
         [8,0],
         [1,3],
@@ -26,7 +26,7 @@ const domenica = {
         [6,9],
         [8,6]
     ],
-    group2: [
+    [
         [8,2],
         [3,4],
         [1,9],
@@ -48,7 +48,7 @@ const domenica = {
         [4,3],
         [1,6]
     ],
-    group3: [
+    [
         [6,8],
         [1,9],
         [8,9],
@@ -70,15 +70,15 @@ const domenica = {
         [1,6],
         [8,6]
     ]
-}
+]
 
-const mercoledi = {
-    testGroup: [
+const mercoledi = [
+    [
         [2,9],
         [2,7],
         [0,0]
     ],
-    group1: [
+    [
         [8,1],
         [2,2],
         [1,4],
@@ -100,7 +100,7 @@ const mercoledi = {
         [7,6],
         [1,7]
     ],
-    group2: [
+    [
         [3,4],
         [6,2],
         [1,6],
@@ -122,7 +122,7 @@ const mercoledi = {
         [4,2],
         [0,6]
     ],
-    group3: [
+    [
         [8,7],
         [5,8],
         [8,7],
@@ -144,41 +144,41 @@ const mercoledi = {
         [9,1],
         [1,1]
     ]
-}
-const ocacions = {
-    day:[
-        [0,0],
-        [0,0],
-        [0,0],
-        [0,0],
-        [0,0],
-        [0,0],
-        [0,0],
-        [0,0],
-        [0,0],
-        [0,0]
-    ]
-}
+]
+const ocacions =[
+    [0,0],
+    [0,0],
+    [0,0],
+    [0,0],
+    [0,0],
+    [0,0],
+    [0,0],
+    [0,0],
+    [0,0],
+    [0,0]
+]
 function cont (days, times) {
-    for(var i = 1; i < days.length; i += 1) {
-        for(var j = 0; j < days[i].length ; j += 1) {
-            for(var k = 0; k < days[i][j].length; k += 1) {
-                (days[i][j][k] == 0) ? times.day[0][k] = times.day[0][k] + 1
-                : (days[i][j][k] == 1) ? times.day[1][k] = times.day[1][k] + 1
-                : (days[i][j][k] == 2) ? times.day[2][k] = times.day[2][k] + 1
-                : (days[i][j][k] == 3) ? times.day[3][k] = times.day[3][k] + 1
-                : (days[i][j][k] == 4) ? times.day[4][k] = times.day[4][k] + 1
-                : (days[i][j][k] == 5) ? times.day[5][k] = times.day[5][k] + 1
-                : (days[i][j][k] == 6) ? times.day[6][k] = times.day[6][k] + 1
-                : (days[i][j][k] == 7) ? times.day[7][k] = times.day[7][k] + 1
-                : (days[i][j][k] == 8) ? times.day[8][k] = times.day[8][k] + 1
-                : (days[i][j][k] == 9) ? times.day[9][k] = times.day[9][k] + 1
-                : console.log("hola");
+    for(let i = 1; i < days.length; i++) {
+        for(let j = 0; j < days[i].length ; j++) {
+            for(let k = 0; k < days[i][j].length; k++) {
+                (days[i][j][k] == 0) ? times[0][k] = times[0][k] + 1
+                : (days[i][j][k] == 1) ? times[1][k] = times[1][k] + 1
+                : (days[i][j][k] == 2) ? times[2][k] = times[2][k] + 1
+                : (days[i][j][k] == 3) ? times[3][k] = times[3][k] + 1
+                : (days[i][j][k] == 4) ? times[4][k] = times[4][k] + 1
+                : (days[i][j][k] == 5) ? times[5][k] = times[5][k] + 1
+                : (days[i][j][k] == 6) ? times[6][k] = times[6][k] + 1
+                : (days[i][j][k] == 7) ? times[7][k] = times[7][k] + 1
+                : (days[i][j][k] == 8) ? times[8][k] = times[8][k] + 1
+                : times[9][k] = times[9][k] + 1;
             }
         }
-        console.log(times.day)
-        return days[i][j][k];
+        console.table(times);
+        for (let l = 0; l < times.length; l++) {
+            for (let m = 0; m < times[l].length; m++) {
+                times[l][m] = 0;
+            }
+        }
     }
 }
-let b = cont(domenica, ocacions);
-console.log(b);
+cont(domenica, ocacions);
