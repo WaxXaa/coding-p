@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+.box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.ttl {
+    font-size: 1.7rem;
+    margin: 20px;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    height: 600px;
+}
+.data {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.inp {
+    width: 50%;
+    height: 100%;
+    background-color: blueviolet;
+}
+.pass {
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pass, #calculate {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.counter {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: center;
+}
+.count_num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#minus, #char-num, #plus {
+text-align: center;
+}
+input[type=checkbox] {
+    opacity: 0;
+}
+input:active ~ .check {
+    width: 100%;
+    height: 100%;
+    background-color:black;
+}
+.inp input {
+    width: 100%;
+    height: 100%;
+}
