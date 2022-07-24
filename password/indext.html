@@ -16,23 +16,26 @@
             <div class="main">
                 <div class="data char">
                     <div class="label">
-                        <p>Number of characters</p>
+                        <p>Number of Characters</p>
                     </div>
                     <div class="inp counter">
                         <button id="minus">-</button>
                         <div class="count_num">
-                            <span id="char-num">8</span>
+                            <span id="char-num"></span>
                         </div>
                         <button id="plus">+</button>
                     </div>
                 </div>
                 <div class="data number">
                     <div class="label">
-                        <label for="num">numbers</label>
+                        <label for="num">Numbers</label>
                     </div>
                     <div class="inp">
-                        <input type="checkbox" id="num" checked>
-                        <span class="check"></span>
+                        <div class="switch" id="numb">
+                            <div class="check check-on" id="nu"></div>
+                            <div class="on-off on" id="on_off_num">On</div>
+                            <input type="checkbox" id="num"  role="switch" value="off" checked>
+                        </div>
                     </div>
                 </div>
                 <div class="data upper">
@@ -40,8 +43,11 @@
                         <label for="upper">UpperCase</label>
                     </div>
                     <div class="inp">
-                        <input type="checkbox" id="upper" checked>
-                        <span class="check"></span>
+                        <div class="switch" id="caps">
+                            <div class="check check-on" id="ca"></div>
+                            <div class="on-off on" id="on_off_upper">On</div>
+                            <input type="checkbox" id="upper" role="switch" checked>
+                        </div>
                     </div>
                 </div>
                 <div class="data symb">
@@ -49,18 +55,22 @@
                         <label for="symbols">Symblos</label>
                     </div>
                     <div class="inp">
-                        <input type="checkbox" id="symbols" checked>
-                        <span class="check"></span>
+                        <div class="switch" id="symb">
+                            <div class="check check-on" id="sy"></div>
+                            <div class="on-off on" id="on_off_symb">On</div>
+                            <input type="checkbox" id="symbols" role="switch" checked>
+                        </div>
                     </div>
                 </div>
                 <div class="data cal">
                     <button id="calculate">Genetate PassWord</button>
                 </div>
-                <div class="data pass">
+                <div class="data" id="div_pass">
                     <span id="pass"></span>
                 </div>
             </div>
         </div>
     </div>
+    <script src="password.js"></script>
 </body>
 </html>

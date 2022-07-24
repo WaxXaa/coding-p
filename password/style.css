@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300&family=Roboto+Slab:wght@300&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html {
+    background-image: linear-gradient(to right, #000428, #031a40, #062a5a, #073b75, #004e92);
+    color: #E1FFFA;
+    font-family: 'Roboto Slab', serif;
 }
 .container {
     width: 100vw;
@@ -22,15 +28,17 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    height: 500px;
 }
 .data {
     width: 100%;
     height: 15%;
     display: flex;
-    justify-content: space-between;
-    border: 1px solid black;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px 0;
 }
 .label {
     display: flex;
@@ -38,12 +46,19 @@
     align-items: center;
 }
 .inp {
-    width: 50%;
-    height: 100%;
-    background-color: blueviolet;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
 }
 .pass {
-    background-color: bisque;
+    color: #E1FFFA;
+    border: 1px solid #B3D8FF;
+    border-radius: 20px;
+    height: 10%;
+}
+#pass {
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,6 +67,18 @@
     width: 100%;
     height: 100%;
     text-align: center;
+}
+#calculate {
+    background-color: transparent;
+    color: #E1FFFA;
+    border: 1px solid #B3D8FF;
+    border-radius: 20px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+}
+
+#calculate:active {
+    background-color: #1a68bb;
 }
 .counter {
     display: grid;
@@ -62,19 +89,66 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 #minus, #char-num, #plus {
 text-align: center;
+border-radius: 20px;
+}
+#char-num {
+    font-size: 25px;
+}
+#minus, #plus {
+    background-color: #B3D8FF;
+    border: none;
+    transition: background-color 0.2s;
+}
+#minus:active, #plus:active {
+    background-color: #1a68bb;
+}
+.switch {
+    position: relative;
+    left: 0px;
+    border: 1px solid #B3D8FF;
+    height: 40px;
+    width: 100px;
+    border-radius: 50px;
 }
 input[type=checkbox] {
+    height: 100%;
+    width: 100%;
     opacity: 0;
+    z-index: 5;
 }
-input:active ~ .check {
-    width: 100%;
-    height: 100%;
-    background-color:black;
+.check {
+    height: 36px;
+    width: 36px;
+    position: absolute;
+    top: 1px;
+    border-radius: 50px;
 }
-.inp input {
-    width: 100%;
-    height: 100%;
+.check-on {
+    left: 1px;
+    background-color: #71fa88;
 }
+.check-off {
+    right: 1px;
+    background-color: #D37676;
+}
+.on-off {
+    height: 36px;
+    width: 50px;
+    position: absolute;
+    top: 1px;
+    text-align: center;
+    padding: 3px;
+    font-size: 25px;
+    color: aliceblue;
+}
+.on {
+    right: 10px;
+}
+.off {
+    left: 10px;
+}
+
