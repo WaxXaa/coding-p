@@ -5,12 +5,14 @@ class Snake {
         this.y = y
     }
 }
+
 const canva = document.querySelector('#canva')
 const cnv = canva.getContext('2d')
 let speed = 7
+
 // the til is divided in 30 squers
 let tileDivision = 20
-let tileLimit = 600 / tileDivision - 10
+let tileLimit =  600 / tileDivision - 10
 let snakeHeadX = 14
 let snakeHeadY = 14
 let snakeDirX = 0
@@ -23,6 +25,7 @@ let appleX = 5
 let appleY = 5
 let score = 0
 function loadGame() {
+
     snakeDirX = dirX
     snakeDirY = dirY
     let GameState = resetGame()
@@ -59,7 +62,8 @@ const resetGame = () => {
 
 const reload = () => {
     cnv.fillStyle = "black"
-    cnv.fillRect(0,0,600,600)
+    cnv.fillRect(0,0,canva.width,canva.height)
+
 }
 const loadApple = () => {
     cnv.fillStyle = "red"
@@ -67,6 +71,9 @@ const loadApple = () => {
 }
 const eatFood = () => {
     if(snakeHeadX === appleX && snakeHeadY === appleY) {
+        eatAudio.play()
+        console.log(snakeHeadX, snakeHeadY)
+        console.log(appleX, appleY)
         appleX = Math.floor(Math.random() * 30)
         appleY = Math.floor(Math.random() * 30)
         snakeLenght++
@@ -109,7 +116,6 @@ function direction(e) {
         dirY = -1
         dirX = 0
     }
-    console.log(e.keyCode)
     if(e.keyCode == 40) {
         if(dirY == 1) {
             return
